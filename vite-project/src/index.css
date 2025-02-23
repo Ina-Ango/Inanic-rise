@@ -1,0 +1,205 @@
+/* Global Root Styles */
+:root {
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Links */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+/* Prevents page scrolling but allows content scrolling */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Prevents body scrolling */
+  background-color: #09243b;
+}
+
+/* Main container (Full-Page Layout) */
+.maincontainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Prevents accidental body scrolling */
+}
+
+/* Header (Fixed at Top) */
+.header {
+  flex-shrink: 0;
+  padding: 1rem;
+  background: rgba(19, 36, 48, 0.8);
+  box-shadow: 7px 7px 9px #1a1a1a;
+  text-align: left;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+}
+.header-action:hover {
+  background: #043538;
+}
+/* Content Area (Scrollable) */
+.content {
+  flex: 1;
+  overflow: auto; /* Enables scrolling */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; /* Ensures proper alignment */
+}
+
+/* Large Image Container */
+.large-image {
+  width: 4000px;
+  height: 4000px;
+  background-image: url("https://pbs.twimg.com/media/Git6JPoWkAASilt?format=jpg&name=4096x4096");
+  background-repeat: no-repeat;
+  background-position: top left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border: 2px solid black;
+}
+
+h1.callaction
+{
+    justify-content: flex-end; /* Moves buttons to the right */
+}
+
+h1.maincontainer{
+  justify-content: flex-start;
+ }
+/* H1 (Title) */
+h1 {
+ 
+  display: flex;
+  box-shadow: 7px 7px 9px #1a1a1a;
+  color: white;
+  text-align: left;
+  text-indent: 10px;
+  padding: 1rem;
+  border-bottom: 2px solid black;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Styles */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+button:hover {
+  border-color: #646cff;
+  background-color: #333;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Footer */
+.footer {
+  color: white;
+  flex-shrink: 0;
+  padding: 1rem;
+  background: rgba(12, 4, 82, 0.8); /* Fixed transparency */
+  text-align: center;
+  border-top: 2px solid rgba(128, 128, 128, 0.5);
+}
+
+/* Light Mode (If Preferred) */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+/* Header: Aligning Title & Buttons in a Row */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Title on left, buttons on right */
+  padding: 1rem;
+  background: rgba(19, 36, 48, 0.8);
+  box-shadow: 7px 7px 9px #1a1a1a;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+/* H1 (Title): Inline */
+h1 {
+  display: inline-block;
+  background: #1e2caa;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  margin: 0; /* Remove default margin */
+  box-shadow: 7px 7px 9px #1a1a1a;
+}
+
+/* Call to Action Container (Aligns to Right) */
+.callaction {
+  display: flex;
+  gap: 10px;
+}
+
+/* Call to Action Buttons */
+.header-action {
+  display: inline-block;
+  background: #195546;
+  color: white;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.header-action:hover {
+  background: #07343a;
+}
+
+/* Footer (Reduced Height) */
+.footer {
+  color: white;
+  flex-shrink: 0;
+  padding: 0.5rem; /* Reduced height */
+  background: rgba(12, 4, 82, 0.8);
+  text-align: center;
+  border-top: 2px solid rgba(128, 128, 128, 0.5);
+}
